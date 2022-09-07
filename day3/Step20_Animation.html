@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        canvas{
+            margin: 100px auto;
+            display: block;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="cn" width="500" height="500"></canvas>
+    <script>
+        var boxX=-100;
+        var ctx = document.getElementById("cn").getContext("2d");
+        setInterval(function(){
+            ctx.clearRect(0,0,500,500);
+            ctx.fillStyle="rgba(255,0,0,0.5)"
+            ctx.fillRect(boxX,0,100,100);
+            boxX+=10;
+            if(boxX>500)
+            {
+                boxX=-100;
+            }
+        },10);
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime</title>
+    <style>
+        #can{
+            outline: 2px solid black;
+            margin: 100px auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="can" width="200" height="134"></canvas>
+    <script>
+        var ctx = document.getElementById("can").getContext("2d");
+        var horse = new Image();
+            horse.src = "images/horse.png";
+            horse.onload = animation;
+            var hboX = 0;
+            function animation(){
+          setInterval(function(){
+            ctx.clearRect(0,0,200,134);
+            hboX-=200;
+            ctx.drawImage(horse,hboX,0);
+            console.log(hboX);
+            if(hboX ==-2000 ){
+                hboX =0 ;
+            }
+          },100) 
+        };
+    </script>
+</body>
+</html>

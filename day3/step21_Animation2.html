@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        canvas{
+            margin: 100px auto;
+            display: block;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="cn" width="500" height="500"></canvas>
+    <script>
+        var ctx = document.getElementById("cn").getContext("2d");
+        setInterval(function(){
+            ctx.clearRect(0,0,500,500);
+            var boxX = Math.round(Math.random()*500);
+            var boxY = Math.round(Math.random()*500);
+            var boxD = Math.round(Math.random()*500);
+            var red = Math.round(Math.random()*255);
+            var green = Math.round(Math.random()*255);
+            var blue = Math.round(Math.random()*255);
+            ctx.fillStyle="rgb("+red+","+green+","+blue+")";
+            ctx.fillRect(boxX, boxY, boxD, boxD);
+            
+        },10);
+
+    </script>
+</body>
+</html>

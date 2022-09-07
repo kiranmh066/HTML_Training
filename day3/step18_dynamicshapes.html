@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas with shapes</title>
+    <style>
+        canvas{
+            border: 2px solid black;
+            margin: 100px;
+            display: block;
+           
+        }
+    </style>
+</head>
+<body>
+    <canvas id="can" width="800" height="800">
+    </canvas >
+    <script>
+        var ctx = document.getElementById("can").getContext("2d");
+            
+            ctx.beginPath();
+            ctx.strokeStyle="red";
+
+            ctx.fillRect(10,600,100,300);
+
+            for(var i=10;i<=800;i+=10)
+            {
+                ctx.moveTo(i,0);
+                ctx.lineTo(i,800);
+            }
+            // for(var i=10;i<=800;i+=10)
+            // {
+            //     ctx.moveTo(i,0);
+            //     ctx.lineTo(800,i);
+            // }
+            // for(var i=10;i<=800;i+=10)
+            // {
+            //     ctx.moveTo(0,i);
+            //     ctx.lineTo(i,800);
+            // }
+            for(var i=10;i<=800;i+=10)
+            {
+                ctx.moveTo(0,i);
+                ctx.lineTo(800,i);
+            }           
+            ctx.stroke();
+           
+    </script>
+</body>
+</html>

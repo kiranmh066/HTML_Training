@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boat</title>
+    <style>
+         canvas{
+            border: 2px solid black;
+            display: block;
+            margin: 100px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="cn" width="500" height="500"></canvas>
+    <script>
+        var ctx=document.getElementById("cn").getContext("2d");
+
+            ctx.beginPath();
+            ctx.strokeStyle="red";
+            ctx.fillStyle="rgba(255,0,0,0.5)";
+            ctx.moveTo(150,450);
+            ctx.lineTo(350,450);
+            ctx.lineTo(450,400);
+            ctx.lineTo(50,400);
+            ctx.lineTo(150,450);
+            ctx.stroke();
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.strokeStyle="red";
+            ctx.fillStyle="rgba(0,0,255,0.5)";
+            ctx.moveTo(250,400);
+            ctx.lineTo(250,100);
+            ctx.lineTo(400,300);
+            ctx.lineTo(250,300);
+            // ctx.lineTo(150,450);
+            ctx.stroke();
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.strokeStyle="red";
+            ctx.fillStyle="rgba(0,0,255,0.5)";
+            ctx.moveTo(400,50);
+            ctx.lineTo(420,100);
+            ctx.lineTo(450,100);
+            ctx.lineTo(420,150);
+            ctx.lineTo(450,200);
+            ctx.lineTo(400,180);
+            ctx.lineTo(350,200);
+            ctx.lineTo(380,150);
+            ctx.lineTo(350,100);
+            ctx.lineTo(380,100);
+            ctx.lineTo(400,50);
+            ctx.stroke();
+            ctx.fill();
+
+
+        setInterval(function(){
+           ctx.beginPath();
+            var cX = Math.round(Math.random()*500);
+            var cY = Math.round(Math.random()*500);
+            var cR = Math.round(Math.random()*40);
+            var red = Math.round(Math.random()*255);
+            var green = Math.round(Math.random()*255);
+            var blue = Math.round(Math.random()*255);
+            var alpha = Math.random()*1;
+            ctx.fillStyle="rgb(0,0,"+blue+","+alpha+")";
+            ctx.arc(cX,450+cY,cR,0,(Math.PI/180)*360,true);
+            ctx.font="bold 40px arial"
+            ctx.fillText("Boat",50,40);
+            ctx.fill();
+            ctx.closePath();
+            
+        },10);
+    </script>
+</body>
+</html>

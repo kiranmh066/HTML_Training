@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <style>
+        canvas{
+            border:2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="can" width="500" height="400"></canvas>
+    <script>
+        var can=document.getElementById("can");
+        var ctx=can.getContext("2d");
+        ctx.font="bold 40px arial"
+        ctx.fillStyle="orange";
+        // ctx.scale(2,1);
+        // ctx.rotate((Math.PI/180)*45);
+        ctx.translate(10,40);
+        ctx.fillText("valtech_",50,40);
+        
+        ctx.fillStyle="black";
+        ctx.translate(10,70);
+        ctx.fillText("INDIA",10,40);
+    </script>
+</body>
+</html>
