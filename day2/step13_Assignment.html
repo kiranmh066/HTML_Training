@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        for (let i = 0; i <10; i++)
+        {
+                function storeinfo(){
+                var info = {
+                    uname:document.getElementById("uname").value,
+                    uage:document.getElementById("umail").value,
+                    uphone:document.getElementById("uphone").value
+                };
+                // console.log("User info", info);
+                localStorage.setItem(item[i],JSON.stringify(info));
+        }
+        }
+        // function storeinfo(){
+        //     var info = {
+        //         uname:document.getElementById("uname").value,
+        //         uage:document.getElementById("umail").value,
+        //         uphone:document.getElementById("uphone").value
+        //     };
+        //     // console.log("User info", info);
+        //     localStorage.setItem("user",JSON.stringify(info));
+        // }
+        function clearinfo(){
+            localStorage.clear();
+        }
+        function getKeyName(){
+            alert(localStorage.key(0));
+        }
+        function getLength(){
+            alert(localStorage.length);
+        }
+
+    </script>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <th>User Name</th>
+                <td><input id="uname" type="text"></td>
+            </tr>
+            <tr>
+                <th>User email</th>
+                <td><input id="umail" type="email"></td>
+            </tr>
+            <tr>
+                <th>User Phone</th>
+                <td><input id="uphone" type="tel"></td>
+            </tr>
+            <tr>
+                <th>&nbsp;</th>
+                <td><input onclick="storeinfo()" type="submit" value="store"></td>
+            </tr>
+            <tr>
+                <th>&nbsp;</th>
+                <td><input onclick="clearinfo()" type="submit" value="Clear"></td>
+            </tr>
+            <tr>
+                <th>&nbsp;</th>
+                <td><input onclick="getKeyName()" type="submit" value="KeyName"></td>
+            </tr>
+            <tr>
+                <th>&nbsp;</th>
+                <td><input onclick="getLength()" type="submit" value="Length"></td>
+            </tr>
+
+
+        </tbody>
+    </table>
+</body>
+</html>

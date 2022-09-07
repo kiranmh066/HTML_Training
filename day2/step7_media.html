@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+</head>
+<body>
+    <h1>currentTime: <output id="op"></output></h1>
+    <h2>Volume: <output id="sp"></output></h2>
+
+    <audio id="audi">
+        <source src="media/html5.mp4">
+        <source src="media/html5.webm">
+    </audio>
+    <button onclick="playaudi()">play</button>
+    <button onclick="pauseaudi()">pause</button>
+    <button onclick="stopaudi()">stop</button>
+    <button onclick="rewindaudi()">rewind</button>
+    <button onclick="increasevol()">increase</button>
+    <button onclick="decreasevol()">decrease</button>
+    
+    <script>
+        setInterval(function val(){
+            document.getElementById("op").value = document.getElementById("audi").currentTime;
+        })
+        
+        function playaudi(){
+            document.getElementById("audi").play();
+        }
+        function pauseaudi(){
+            document.getElementById("audi").pause();
+        }
+        function stopaudi(){
+            document.getElementById("audi").currentTime=0;
+            document.getElementById("audi").pause();
+
+        }
+        function rewindaudi(){
+            document.getElementById("audi").currentTime =document.getElementById("audi").currentTime-1;
+        }
+        function increasevol(){
+            document.getElementById("audi").volume()+=0.1;
+        }
+        function decreasevol(){
+            document.getElementById("audi").volume()-=0.1;            
+        }
+        setInterval(function(){
+            document.getElementById("sp").value = document.getElementById("audi").volume;
+        })
+    </script>
+</body>
+</html>
