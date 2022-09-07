@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function textInputHandler(source,target) {
+            document.getElementById(target).value=source.value
+        };
+
+        function outputHandler(source){
+            document.getElementById("prog").value=source.value;
+        };
+    </script>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>ID number</th>
+                <th>THe ENtered VAlues ARe</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>text</td>
+                <td><input type="text" oninput="textInputHandler(this,'text1')"></td>
+                <td><output id="text1"></output></td>
+            </tr>
+            <tr>
+                <td>search</td>
+                <td><input type="search" oninput="textInputHandler(this,'text2')"></td>
+                <td><output id="text2"></output></td>
+            </tr>
+            <tr>
+                <td>time</td>
+                <td><input type="time"oninput="textInputHandler(this,'text3')"></td>
+                <td><output id="text3"></output></td>
+            </tr>
+            <tr>
+                <td>datetime-local</td>
+                <td><input type="datetime-local"oninput="textInputHandler(this,'text4')"></td>
+                <td><output id="text4"></output></td>
+            </tr>
+            <tr>
+                <td>date</td>
+                <td><input type="date"oninput="textInputHandler(this,'text5')"></td>
+                <td><output id="text5"></output></td>
+            </tr>
+            <tr>
+                <td>week</td>
+                <td><input type="week" oninput="textInputHandler(this,'text6')"></td>
+                <td><output id="text6"></output></td>
+            </tr>
+            <tr>
+                <td>month</td>
+                <td><input type="month" oninput="textInputHandler(this,'text7')"></td>
+                <td><output id="text7"></output></td>
+            </tr>
+            <tr>
+                <td>number</td>
+                <td><input type="number" oninput="textInputHandler(this,'text8')"></td>
+                <td><output id="text8"></output></td>
+            </tr>
+
+            <tr>
+                <td>range</td>
+                <td><input type="range" oninput="textInputHandler(this,'text9')"></td>
+                <td><output id="text9"></output></td>
+            </tr>
+            <tr>
+                <td>tel</td>
+                <td><input type="tel" oninput="textInputHandler(this,'text10')"></td>
+                <td><output id="text10"></output></td>
+            </tr>
+            <tr>
+                <td>Color</td>
+                <td><input type="color" oninput="textInputHandler(this,'text11')"></td>
+                <td><output id="text11"></output></td>
+            </tr>
+
+            <tr>
+                <td>progress</td>
+                <td><input min="0" max="1" step="0.1" type="range" oninput="outputHandler(this)"></td>
+                <td><progress id="prog"></progress></td>
+            </tr>
+            <tr>
+                <td>meter</td>
+                <td><meter min="0.2" max="0.8" optimum="0.5" value="0.4"></meter></td>
+                <!-- <td><output id="text11"></output></td> -->
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+</html>
