@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Class Selector</title>
+    <style>
+        a{
+            background-color: antiquewhite;
+            color: blue;
+        }
+        a:link{
+            background-color: aquamarine;
+            color: darkmagenta;
+        }
+        a:visited{
+            background-color: blanchedalmond;
+            color: brown;
+        }
+        p{
+            margin: 10px;
+            padding: 10px;
+        }
+        p::first-line{
+            color: rgb(249, 0, 87);
+        }
+        p:hover{
+            background-color: coral;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea nemo cumque, deleniti quidem, quasi similique distinctio alias enim laudantium adipisci eius ullam quis perferendis architecto id nisi inventore mollitia hic, vero eos odit debitis fuga amet provident. Expedita, eius corrupti!</p>
+    <a>Dummy Anchor Tag</a>
+    <br>
+    <a href="https://www.google.com/">Live Google Anchor Tag</a>
+    <br>
+    <a href="https://www.valtech.com/en-in/">visited valtech</a>
+</body>
+</html>

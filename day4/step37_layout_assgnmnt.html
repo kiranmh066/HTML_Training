@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignmnt Layout</title>
+    <style>
+        body{
+            padding: 2px;
+            /* position: relative; */
+        }
+        .container{
+            border: 2px solid black;
+            width: 1000px;
+            margin: auto;
+            padding: 10px;
+            /* position: relative; */
+        }
+        main{
+            border: 2px solid black;
+            padding: 10px;
+            width: 400px;  
+            margin: 10px; 
+
+        }
+        header{ 
+            border: 2px solid black;
+            height: 30px;
+            background-color: yellow ;
+            color : black;
+            text-align: center;
+            font-size: 18px;
+            /* line-height: 100px; */
+        }
+        footer{ 
+            border: 2px solid black;
+            height: 50px;
+            background-color: rgb(116, 116, 129) ;
+            color : aliceblue;
+            margin: 10px;
+            text-align: center;
+            /* line-height: 50px; */
+        }
+        section{
+            background-color: antiquewhite;
+            border: 2px solid black;
+            /*  display: table; */
+            padding: 10px;
+        }
+        /* section:after{
+            content: "";
+            display: block;
+            clear: both;
+        } */
+        article{
+            padding: 10px;
+            margin-bottom: 4px;
+        }
+        h1{
+            border: 2px solid black;
+            background-color: yellow;
+        }
+        /* article h1{
+            margin: 0px;
+        } */
+       
+        aside{
+            border: 2px solid black;
+            padding: 10px;
+            margin: 4px;
+            /* width: 400px;   */
+            position: absolute;
+            right: 490px;
+            top: 80px;
+            height: 200px;
+            width: 350px;
+        }
+        /* .box1{
+            background-color: yellow;
+            margin-left: 10px;
+        }
+        .box2{
+            background-color: orange;
+            margin-left: 10px;
+        }
+        .box3{
+            margin-left: 10px;
+            background-color: red;
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            HEADER
+        </header>
+        <main>MAIN
+            <section>
+                <article class="box1">
+                    <h1>HEADER</h1>
+                </article>
+
+                <article class="box2">
+                    <h1>ARTICLE</h1>
+                    
+                </article>
+                <article class="box3">
+                    <h1>ARTICLE</h1>
+                   
+                </article>
+                <article class="box4">
+                    <h1>ARTICLE</h1>
+                   
+                </article>
+            </section>
+        </main>
+        <aside>ASIDE
+            <header>HEADER</header>
+        </aside>
+        <footer>
+            FOOTER
+        </footer>
+    </div>
+</body>
+</html>

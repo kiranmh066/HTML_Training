@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 2px solid red;
+            width: 1000px;
+            margin: auto;
+        }
+        header{ 
+            height: 100px;
+            background-color: darkblue ;
+            color : aliceblue;
+            text-align: center;
+            font-size: 30px;
+            line-height: 100px;
+        }
+        footer{ 
+            height: 50px;
+            background-color: darkblue ;
+            color : aliceblue;
+            text-align: center;
+            line-height: 50px;
+        }
+        section{
+            background-color: antiquewhite;
+           /*  display: table; */
+        }
+        section:after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        article{
+            padding: 10px;
+        }
+        article h1{
+            margin: 0px;
+        }
+        .box1, .box2, .box3{
+            width: 300px;
+            float: left;
+        }
+        .box1{
+            background-color: yellow;
+            margin-left: 10px;
+        }
+        .box2{
+            background-color: orange;
+            margin-left: 10px;
+        }
+        .box3{
+            margin-left: 10px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            Valtech India Application &REG;
+        </header>
+        <section>
+            <article class="box1">
+                <h1>First</h1>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati expedita, cum placeat voluptas saepe hic aspernatur qui dicta alias amet facere, illum earum debitis cupiditate a quibusdam, consectetur deleniti unde.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit ea itaque eligendi voluptates nihil vitae, in praesentium nemo eaque necessitatibus, aut dolorem eos iste provident, sapiente quae! Suscipit, est omnis?
+            </article>
+            <article class="box2">
+                <h1>Second</h1>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati expedita, cum placeat voluptas saepe hic aspernatur qui dicta alias amet facere, illum earum debitis cupiditate a quibusdam, consectetur deleniti unde.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit ea itaque eligendi voluptates nihil vitae, in praesentium nemo eaque necessitatibus, aut dolorem eos iste provident, sapiente quae! Suscipit, est omnis?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit ea itaque eligendi voluptates nihil vitae, in praesentium nemo eaque necessitatibus, aut dolorem eos iste provident, sapiente quae! Suscipit, est omnis?
+            </article>
+            <article class="box3">
+                <h1>Third</h1>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati expedita, cum placeat voluptas saepe hic aspernatur qui dicta alias amet facere, illum earum debitis cupiditate a quibusdam, consectetur deleniti unde.
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit ea itaque eligendi voluptates nihil vitae, in praesentium nemo eaque necessitatibus, aut dolorem eos iste provident, sapiente quae! Suscipit, est omnis?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit ea itaque eligendi voluptates nihil vitae, in praesentium nemo eaque necessitatibus, aut dolorem eos iste provident, sapiente quae! Suscipit, est omnis?
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sit ea itaque eligendi voluptates nihil vitae, in praesentium nemo eaque necessitatibus, aut dolorem eos iste provident, sapiente quae! Suscipit, est omnis?
+            </article>
+        </section>
+        <footer>
+            &copy;copyrights reserved by valtech India
+        </footer>
+    </div>
+</body>
+</html>

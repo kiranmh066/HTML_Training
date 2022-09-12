@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layouts</title>
+    <style>
+        body{
+            border: 2px solid black;
+            background-color: rgb(255, 255, 255);
+            padding: 2px;
+        }
+        header{
+            border: 2px solid black;
+            background-color: yellow;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+        main{
+            width: 500px;
+            border: 2px solid black;
+            background-color:blue;
+            /* padding: 5px; */
+            float: left;
+        }
+        section{
+            border: 2px solid black;
+            background-color: rgb(183, 183, 169);
+            padding: 5px;
+        }
+        article{
+            border: 2px solid black;
+            margin-bottom: 10px;
+            background-color: yellow;
+        }
+        aside{
+            text-align: center;
+            height: 230px;
+            border: 2px solid black;
+            /* margin-bottom: 10px; */
+            background-color: rgba(110, 119, 132, 0.243);
+            padding: 10px;
+        }
+        .imp{
+            border: 2px solid black;
+            background-color: rgb(80, 77, 73);
+            margin-bottom: 10px;
+        }
+        .ver{
+            text-align: center;
+            border: 2px solid black;
+            background-color: rgb(80, 77, 73);
+            /* margin-bottom: 10px; */
+
+        }
+        footer{
+            border: 2px solid black;
+            background-color: rgb(80, 77, 73);
+            margin-bottom: 4px;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+    <header class="imp">HEADER</header>
+    <Main>
+        <h1>Main</h1>
+        <section><span>SECTION</span>
+            <header>HEADER</header>
+            <article>ARTICLE 1</article>
+            <article>ARTICLE 2</article>
+            <article>ARTICLE 3</article>
+        </section>
+    </Main>
+    <aside>ASIDE
+        <header class="very">HEADER</header>
+    </aside>
+    <footer>FOTER</footer>
+</body>
+</html>
